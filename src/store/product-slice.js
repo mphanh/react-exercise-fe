@@ -18,7 +18,7 @@ const productSlice = createSlice({
         state.filteredItems = state.items;
       }
       const min = actions.payload.min === "" ? 0 : actions.payload.min;
-      const max = actions.payload.max === "" ? 100 : actions.payload.max;
+      const max = actions.payload.max === "" ? 1000 : actions.payload.max;
       state.filteredItems = state.filteredItems.filter(
         (item) => item.price >= parseInt(min) && item.price <= parseInt(max)
       );
@@ -30,6 +30,10 @@ const productSlice = createSlice({
           id: item.id,
           price: item.price,
           title: item.title,
+          description: item.description,
+          category: item.category,
+          image: item.image,
+          rating: item.rating
         });
       });
       state.filteredItems = state.items;

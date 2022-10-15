@@ -4,16 +4,7 @@ import { productActions } from "./product-slice";
 export const fetchProducts = () => {
   return async (dispatch) => {
     const fetchData = async () => {
-    //   let headers = new Headers();
-
-    //   headers.append("Content-Type", "application/json");
-    //   headers.append("Accept", "application/json");
-    //   headers.append("Origin", "http://localhost:3000");
       const response = await fetch("https://fakestoreapi.com/products");
-        // headers,
-        // method: "GET",
-        // mode: "cors",
-    //   });
       if (!response.ok) {
         throw new Error("Something went wrong!");
       }
