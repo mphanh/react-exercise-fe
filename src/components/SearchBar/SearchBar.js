@@ -7,7 +7,7 @@ const SearchBar = () => {
   const dispatch = useDispatch();
   const keywordRef = useRef("");
   const minPriceRef = useRef(0);
-  const maxPriceRef = useRef(100);
+  const maxPriceRef = useRef(1000);
 
   const searchByNameHandler = (event) => {
     event.preventDefault();
@@ -22,22 +22,22 @@ const SearchBar = () => {
         <input
           type="number"
           min="0"
-          max="100"
+          max="1000"
           ref={minPriceRef}
-          placeholder="Min"
+          placeholder="$0"
           onInput={searchByNameHandler}
         />
         <p>To </p>
         <input
           type="number"
           min="0"
-          max="100"
+          max="1000"
           ref={maxPriceRef}
-          placeholder="Max"
+          placeholder="$1000"
           onInput={searchByNameHandler}
         />
       </div>
-      <button onClick={searchByNameHandler}>Seach</button>
+      <button onClick={searchByNameHandler}>Search</button>
     </div>
   );
 };

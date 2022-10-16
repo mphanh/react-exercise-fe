@@ -22,6 +22,11 @@ export const fetchProducts = () => {
           id: key,
           title: data[key].title,
           price: data[key].price,
+          title: data[key].title,
+          description: data[key].description,
+          category: data[key].category,
+          image: data[key].image,
+          rating: data[key].rating
         });
       }
       dispatch(productActions.receiveProducts(loadedProducts));

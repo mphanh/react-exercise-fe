@@ -1,6 +1,7 @@
 .search {
   overflow: hidden;
   text-align: center;
+  background-color: darkgray;
 }
 
 .search input {
@@ -25,10 +26,14 @@
 }
 
 .search button:hover {
-  background: #0b7dda;
+  background: cadetblue;
 }
 
 .priceFilter {
   width: 20rem;
   display: inline-flex;
+}
+
+.search input[type=number] {
+  height: fit-content;
 }
