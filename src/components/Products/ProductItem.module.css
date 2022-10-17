@@ -90,3 +90,23 @@
   font-weight: lighter;
   overflow: hidden;
 }
+
+@media (max-width: 740px) {
+  .item {
+    width: 100%;
+    min-width: 414px;
+    height: 1028px;
+    text-align: center;
+  }
+  .details {
+    display: inline-block;
+    margin-top: 1.5rem;
+  }
+  .ref {
+    height: 0;
+  }
+  .info {
+    display: block;
+    text-align: center;
+  }
+}

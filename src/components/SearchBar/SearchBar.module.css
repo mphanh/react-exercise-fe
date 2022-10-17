@@ -37,3 +37,13 @@
 .search input[type=number] {
   height: fit-content;
 }
+
+@media (max-width: 740px) {
+  .search {
+    min-width: 414px;
+    overflow: hidden;
+  }
+  .search button {
+    margin-bottom: 8px;
+  }
+}
